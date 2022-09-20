@@ -1,0 +1,26 @@
+a,
+a:link,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.panda-bg-info {
+    background-color: #fceae8;
+}
+.panda-bg-success {
+    background-color: orchid;
+}
+.panda-button-bye-now {
+    background-image: linear-gradient(to bottom, #ff589b 0%, #ff136f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 25px;
+}
+.text-panda {
+    color: #ff136f;
+}
+.categories img {
+    width: 100px;
+}
