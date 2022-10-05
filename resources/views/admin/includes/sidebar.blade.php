@@ -20,8 +20,8 @@
           aria-hidden="true"></i><span class="hide-menu">Users</span></a>
         </li>
 
-        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-          href="/admin/category" aria-expanded="false"><i class="me-3 fa fa-font"
+        <li class="sidebar-item" data-name="CategoriesLink2"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+          href="/admin/category" data-name="CategoriesLink" aria-expanded="false"><i class="me-3 fa fa-font"
           aria-hidden="true"></i><span class="hide-menu">Categories</span></a>
         </li>
 
@@ -37,7 +37,7 @@
         <li class="text-center p-20 upgrade-btn">
           <form action="/logout" method="Post">
             @csrf
-            <button class="btn btn-danger text-white mt-4" type="submit">Log Out</button>
+            <button data-name="btnLogout" class="btn btn-danger text-white mt-4" type="submit">Log Out</button>
           </form> 
         </li>
       </ul>

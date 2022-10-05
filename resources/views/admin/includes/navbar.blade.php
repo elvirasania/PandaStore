@@ -51,7 +51,12 @@
             {{-- @endif --}}
             {{-- {{ Auth::user()->name }} --}}
           </a>
-          <ul class="dropdown-menu show" aria-labelledby="navbarDropdown"></ul>
+          <ul class="dropdown-menu show" aria-labelledby="navbarDropdown">
+            <form action="/logout" method="Post">
+              @csrf
+              <button data-name="btnLogout" class="btn btn-danger text-white mt-4" type="submit">Log Out</button>
+            </form>
+          </ul>
         </li>
       </ul>
     </div>

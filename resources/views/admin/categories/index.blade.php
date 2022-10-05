@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-6 col-4 align-self-center">
       <div class="text-end upgrade-btn">
-        <a href="/admin/category/create"
+        <a href="/admin/category/create" data-name="btnAddCategory"
           class="btn btn-success d-none d-md-inline-block text-white">Tambah Data</a>
       </div>
     </div>
@@ -39,7 +39,7 @@
     <div class="col-sm-12">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Table Category</h4>
+          <h4 class="card-title" data-name="titleCategory">Table Category</h4>
           <h6 class="card-subtitle">List Table <code>Category</code></h6>
           <div class="table-responsive">
             <table class="table user-table no-wrap">
@@ -60,8 +60,8 @@
                         @csrf
                         @method('DELETE')
 
-                        <a href="/admin/category/{{ $item->id }}/edit" class="btn btn-info btn-sm text-light">Edit</a>
-                        <button type="submit" class="btn btn-danger btn-sm text-light">Hapus</button>
+                        <a href="/admin/category/{{ $item->id }}/edit" data-name="btnEditCategory{{ $item->id }}" class="btn btn-info btn-sm text-light">Edit</a>
+                        <button type="submit" data-name="btnDeleteCategory{{ $item->id }}" class="btn btn-danger btn-sm text-light">Hapus</button>
                       </form>
                     </td>
                   </tr>

@@ -18,23 +18,23 @@
               <form action="{{ route('login') }}" method="post">
                 @csrf
                 
-                <h3 class="mb-5">SIGN IN</h3>
+                <h3 class="mb-5" data-name="titleLogin">SIGN IN</h3>
     
                 <div class="form-outline mb-4">
-                  <input type="email" id="typeEmailX-2" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" />
-                  <label class="form-label" for="typeEmailX-2">Email</label>
+                  <input type="email" data-name="textEmail" id="typeEmailX-2" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror" />
+                  <label class="form-label" data-name="labelEmail" for="typeEmailX-2">Email</label>
                   @error('email')
-                    <span class="invalid-feedback" role="alert">
+                    <span class="invalid-feedback" data-name="invalid" role="alert">
                       <strong>{{ $message }}</strong>
                     </span>
                   @enderror
                 </div>
     
                 <div class="form-outline mb-4">
-                  <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" />
-                  <label class="form-label" for="typePasswordX-2">Password</label>
+                  <input type="password" data-name="textPassword" id="typePasswordX-2" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror" />
+                  <label class="form-label" data-name="labelPassword" for="typePasswordX-2">Password</label>
                   @error('password')
-                    <span class="invalid-feedback" role="alert">
+                    <span class="invalid-feedback" data-name="invalid" role="alert">
                       <strong>{{ $message }}</strong>
                     </span>
                   @enderror
@@ -46,7 +46,7 @@
                   <label class="form-check-label" for="form1Example3"> Remember password </label>
                 </div>
     
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                <button class="btn btn-primary btn-lg btn-block" data-name="btnLoginProcess" type="submit">Login</button>
               </form>
               
               <p>Dont have accont? <a href="/register">Register</a></p>

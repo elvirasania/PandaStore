@@ -4,7 +4,7 @@
 <div class="page-breadcrumb">
   <div class="row align-items-center">
     <div class="col-md-6 col-8 align-self-center">
-      <h3 class="page-title mb-0 p-0">Table Category</h3>
+      <h3 class="page-title mb-0 p-0" data-name="titleCreateCategory">Table Category</h3>
       <div class="d-flex align-items-center">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -34,9 +34,9 @@
             @method('PUT')
 
             <div class="form-group">
-              <label class="col-md-12 mb-0">Category</label>
+              <label class="col-md-12 mb-0" data-name="labelEditCategory">Category</label>
               <div class="col-md-12">
-                <input type="text" name="category" placeholder="Category"
+                <input type="text" name="category" placeholder="Category" data-name="textEditCategory"
                   class="form-control ps-0 form-control-line @error('category') is-invalid @enderror" value="{{ $data->category }}">
 
                 @error('category')
@@ -48,7 +48,7 @@
             </div> 
             <div class="form-group">
               <div class="col-sm-12 d-flex">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" data-name="btnSubmitEditCategory" class="btn btn-primary">Submit</button>
               </div>
             </div>
           </form>
